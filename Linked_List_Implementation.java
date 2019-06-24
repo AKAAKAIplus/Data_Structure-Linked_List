@@ -34,20 +34,19 @@ public class Linked_List_Implementation {
 		// TODO Auto-generated method stub
 		System.out.print("\n\nPrint All Linked List From This Node ->");
 		System.out.println(node);
-		while(node.next_node!=null) {
+		while(true) {
 			System.out.print(node.data);
 			System.out.print("/(F)");
 			System.out.print(node.front_node!=null? node.front_node.data:"no front node");
 			System.out.print("/(N)");
 			System.out.print(node.next_node!=null? node.next_node.data:"no next node");
-			System.out.println(" => ");
-			node = node.next_node;
+			if(node.next_node==null) {break;}
+			else {
+				System.out.println(" => ");
+				node = node.next_node;
+			}
 		}
-		System.out.print(node.data);
-		System.out.print("/(F)");
-		System.out.print(node.front_node!=null? node.front_node.data:"no front node");
-		System.out.print("/(N)");
-		System.out.print(node.next_node!=null? node.next_node.data:"no next node");
+		
 	}
 
 	private static Node node_append(Node node, Object second_content) {
